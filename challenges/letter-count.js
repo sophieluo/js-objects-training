@@ -30,4 +30,14 @@
 
 */
 
-// YOUR CODE HERE
+function letterCount (str) {
+  var output={}
+  var letter=str.toUpperCase().split('')
+
+for (i=0;i<str.length;i++) {
+  var matches = str.match(new RegExp(letter[i], "g"))
+  console.log(matches)
+}
+}
+
+letterCount("Apple")

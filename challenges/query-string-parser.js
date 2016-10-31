@@ -44,4 +44,22 @@
 
 */
 
-// YOUR CODE HERE
+function parseQueryString (str) {
+  var myObj={};
+  str.split('&').forEach(function(x) {
+    var arr=x.split('=')
+    arr[1] && (myObj[arr[0]] = arr[1])
+  })
+  console.log(myObj)
+}
+
+parseQueryString("a=apple&b=banana")
+
+
+
+// Mega Bonus
+// - Can you create the reverse function? Given an object, output a Query Parameter String:
+//
+//   ``` javascript
+//   var o = {first: "alpha", last: "omega"};
+//   convertToQueryParameter(o); // "first=alpha&last=omega";
