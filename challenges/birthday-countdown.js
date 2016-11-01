@@ -33,4 +33,8 @@
 
 */
 
-// YOUR CODE HERE
+function birthdayReminder (arr) {
+  var currentDate= "7/1/2013"
+  arr.forEach()
+  console.log("arr")
+}
