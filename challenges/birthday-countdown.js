@@ -33,8 +33,20 @@
 
 */
 
-function birthdayReminder (arr) {
-  var currentDate= "7/1/2013"
-  arr.forEach()
-  console.log("arr")
+// function birthdayReminder (arr) {
+//   var currentDate= "7/1/2013"
+//   arr.forEach()
+//   console.log("arr")
+// }
+
+function daysUntilDate(dob) {
+var today =Date.now()
+var birthday= Date.parse(dob)
+return 365-Math.round(((today-birthday)/(1000*60*60*24))%365)
+}
+
+function birthdayReminder(arr) {
+  arr.forEach(function(element) {
+    console.log(element.name+'s birthday is in '+daysUntilDate(element.dob)+" days")
+})
 }
